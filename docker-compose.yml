@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - .:/app
+    command: bash -c "bundle install && bin/rails server -p 80 -b 0.0.0.0"
